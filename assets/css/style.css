@@ -62,12 +62,34 @@ footer {
 
 section div{
 	padding: 25px;
+	float: left;
+	width: 28%;
+	background: white;
+}
+section {
+	padding-bottom: 55px;
 }
 footer div {
 	padding: 25px;
 }
 
 footer {
-	background: #F44336;
+	background: #333;
 	color: #fff;
+	display: block;
+	clear: both;
+}
+section:after {
+	content: "";
+	display:block;
+	height: 1px;
+	clear:both;
+
+}
+
+section div a {
+	background-color: #F44336;
+	color:#fff;
+	padding: 10px 25px;
+	text-decoration: none;
 }
