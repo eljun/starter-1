@@ -1,81 +1,142 @@
-<!doctype html>
-<html class="no-js" lang="">
+<!DOCTYPE html>
+<html>
 	<head>
 		<meta charset="utf-8">
-		<meta http-equiv="x-ua-compatible" content="ie=edge">
-		<title>Hello World</title>
-		<meta name="description" content="This is my site">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		
-		<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-		<link rel="apple-touch-icon" href="apple-touch-icon.png">
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
-		<!--<link rel="stylesheet" href="css/main.css"> -->
-		<link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700|Slabo+27px" rel="stylesheet">
-		<link rel="stylesheet" href="assets/css/style.css">
+		<meta http-equiv="x-ua-compatible" content="ie-edge">
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<script src="js/javastyle.js"></script>
+		<title>Band Template</title>
 	</head>
 	<body>
-		<header id="header" class="">
-			<img src="assets/img/logo.jpg" atl="Company Logo" width="250px">
-			<ul class="header-social-media-links">
-				<li>
-					<a href="www.facebook.com" title=""><img src="assets/img/facebook.png"></a>
-				</li>
-				<li>
-					<a href="www.twitter.com" title=""><img src="assets/img/twitter.png"></a>
-				</li>
-				<li>
-					<a href="www.pinterest.com" title=""><img src="assets/img/pinterest.png"></a>
-				</li>
-			</ul>
-			<ul class="menu">
-				<li>Home</li>
-				<li>About</li>
-				<li>Gallery</li>
-				<li>Contact</li>
-			</ul>
-			<div class="slider">
-				<h1>Welcome to our website</h1>
-				<p>Proin interdum justo ligppula, blandit imperdiet dui porttitor vitae justo ligula, blandit imperdiet justo ligula, blandit imperdiet. </p>
+		<div class="navbar">
+			<a href="#home">HOME</a>
+			<a href="#band">BAND</a>
+			<a href="#tour">TOUR</a>
+			<a href="#contact">CONTACT</a>
+			<div class="dropdown1">
+				<button class="dropdown2">MORE
+				<i class="fa fa-caret-down"></i>
+				</button>
+				<div class="dp-content">
+					<a href="#">Merchandise</a>
+					<a href="#">Extras</a>
+					<a href="#">Media</a>
+				</div>
 			</div>
-			</header><!-- /header -->
-			<section>
+			<div class="search">
+				<i class="fa fa-search"></i>
+			</div>
+		</div>
+		<div class="slideshow" style="max-width: 100%">
+			<img class="myslide" src="img/beatles1.jpg" style="width:100%; height:600px;">
+			<img class="myslide" src="img/beatles2.jpg" style="width:100%; height:600px;">
+			<img class="myslide" src="img/beatles3.jpg" style="width:100%; height:600px;">
+			<img class="myslide" src="img/beatles4.jpg" style="width:100%; height:600px;">
+		</div>
+		<script>
+		var myIndex = 0;
+		carousel();
+		function carousel() {
+		var i;
+		var x = document.getElementsByClassName("myslide");
+		for (i = 0; i < x.length; i++) {
+		x[i].style.display = "none";
+		}
+		myIndex++;
+		if (myIndex > x.length) {myIndex = 1}
+		x[myIndex-1].style.display = "block";
+		setTimeout(carousel, 2000); // Change image every 2 seconds
+		}
+		</script>
+		<!--End Slideshow-->
+		<section class="members">
+			<h1>THE BAND</h1>
+			<h2>We love music</h2>
+			<p>We have created a fictional band website. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p><br><br><br><br>
+			<div class="imgmembers">
 				<div>
-					<h2>Title 1</h2>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam dictum volutpat quam aelementum. Mauris vehicula volutpat.</p>
-					<a href="#" title="">Read more</a>
+					<h3>George Harrison</h3>
+					<img src="img/member1.jpg" alt="George Harrison">
 				</div>
 				<div>
-					<h2>Title 2</h2>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam dictum volutpat quam a elementum. Mauris vehicula volutpat.</p>
-					<a href="#" title="">Read more</a>
+					<h3>Ringo Starr</h3>
+					<img src="img/member2.jpg" alt="Ringo Starr">
 				</div>
 				<div>
-					<h2>Title 3</h2>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam dictum volutpat quam a elementum. Mauris vehicula volutpat.</p>
-					<a href="#" title="">Read more</a>
+					<h3>John Lennon</h3>
+					<img src="img/member3.jpg" alt="John Lennon">
 				</div>
-			</section>
-			<footer>
-				<div>					
-					<h3>About</h3>
-					<p>Maecenas malesuada vitae turpis sit amet lobortis. Phasellus et ipsum metus. Phasellus rutrum sed velit ut aliquet. Maecenas et odio commodo, tempus erat non, pharetra turpis. Integer neque risus, molestie in imperdiet vitae, ornare ut nisi. </p>
-					<h3>Follow us:</h3>
-					<ul class="footer-social-media-links">
-						<li>
-							<a href="www.facebook.com" title=""><img src="assets/img/facebook.png"></a>
-						</li>
-						<li>
-							<a href="www.twitter.com" title=""><img src="assets/img/twitter.png"></a>
-						</li>
-						<li>
-							<a href="www.pinterest.com" title=""><img src="assets/img/pinterest.png"></a>
-						</li>
+				<div>
+					<h3>Paul McCartney</h3>
+					<img src="img/member4.jpg" alt="Paul McCartney">
 				</div>
-				</ul>
-			</footer>
-			<!-- For javascript section -->
-			<script src="http://code.jquery.com/jquery-1.12.4.min.js"></script>
-			<script src="js/main.js"></script>
-		</body>
-	</html>
+			</div>
+		</section>
+		<br><br>
+		<!--End Members Section-->
+		<div id="tourdates">
+			<h1>TOUR DATES</h1>
+			<p>Remember to book your tickets!</p>
+			<ul>
+				<li><span class="month">September</span><span class="redtag">Sold out</span></li>
+				<li><span class="month">October</span><span class="redtag">Sold out</span></li>
+				<li class="mainbadge"><span class="month">November</span> <span class="badge">3</span></li>
+			</ul>
+			<br><br>
+			<div>
+				<div>
+					<img style="width: 296px;" src="img/newyork.jpg" alt="newyork">
+					<h2>New York</h2>
+					<h3>Fri 27 Nov 2016</h3>
+				<p2>Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p2><br><br><br>
+				<button class="tickets">Buy Tickets</button>
+			</div>
+			<div>
+				<img src="img/paris.jpg" alt="paris">
+				<h2>Paris</h2>
+				<h3>Sat 28 Nov 2016</h3>
+			<p2>Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p2><br><br><br>
+			<button class="tickets">Buy Tickets</button>
+		</div>
+		<div>
+			<img src="img/sanfrancisco.jpg" alt="sanfrancisco">
+			<h2>San Francisco</h2>
+			<h3>Sun 29 Nov 2016</h3>
+		<p2>Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p2><br><br><br>
+		<button class="tickets">Buy Tickets</button>
+	</div>
+</div>
+<br><br><br><br><br><br>
+</div>
+<!--End Tourdates-->
+<section id="contact">
+<h1>CONTACT</h1>
+<h2>Fan? Drop a note!</h2>
+<div class="icon1">
+	<i class="fa fa-map-marker"></i><span class="iconname1">Chicago, US</span><br>
+	<i class="fa fa-phone"></i><span class="iconname2">Phone: +00 151515</span><br>
+	<i class="fa fa-envelope"></i><span class="iconname">Email: mail@mail.com</span><br>
+</div>
+<div class="form">
+	<input type="text" name="name" placeholder="Name"> <input type="text" name="email" placeholder="Email"><br>
+	<input style="width: 54%;" type="text" name="message" placeholder="Message"><br><br>
+	<button type="submit">SEND</button>
+</div><br><br><br><br><br><br>
+</section>
+<br><br><br>
+<!--End Contact-->
+<footer class="foot1">
+<i title="footer icon" class="fa fa-facebook-official"></i>
+<i title="footer icon" class="fa fa-instagram"></i>
+<i title="footer icon" class="fa fa-snapchat"></i>
+<i title="footer icon" class="fa fa-pinterest"></i>
+<i title="footer icon" class="fa fa-twitter"></i>
+<i title="footer icon" class="fa fa-linkedin"></i>
+<p class="lastp">Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="-blank">w3.css</a></p>
+</footer>
+<br><br><br>
+<!--End Footer-->
+</body>
+</html>
